@@ -17,7 +17,7 @@ module Telegraf
         query = ''
       end
 
-      matches = /^Telegraf v(?<version>(\d+\.)?(\d+\.)?(\*|\d+)).*/.match(query)
+      matches = /^Telegraf (?<version>(\d+\.)?(\d+\.)?(\*|\d+)).*/.match(query)
       matches ? Gem::Version.new(matches[:version]) : Gem::Version.new('0.0.0')
     end
   end
