@@ -187,7 +187,6 @@ action :create do
   service "telegraf_#{new_resource.name}" do
     service_name 'telegraf'
     action :enable
-    delayed_action :start
   end
 end
 
